@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Announcement:
+# python3.9; SimCSE; flask; ...
+
 # Create a virtual environment
 python3.9 -m venv venv
 source venv/bin/activate
@@ -9,6 +12,9 @@ pip install .
 
 # Go back
 cd ..
+
+# Optional: Remove the SimCSE folder
+rm -rf SimCSE
 
 # Install other dependencies
 pip install -r requirements.txt
