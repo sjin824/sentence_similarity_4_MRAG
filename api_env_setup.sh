@@ -20,6 +20,3 @@ pip install -r requirements.txt
 
 # 5. Run the API
 python simcse_api.py
-
-# 6. Test the API
-python test_api.py
