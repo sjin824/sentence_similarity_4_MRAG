@@ -9,19 +9,17 @@ git clone https://github.com/princeton-nlp/SimCSE.git
 cd SimCSE
 pip install .
 
-# 3. Install the other required packages 
-pip install -r requirements.txt
-
-# 4. The scikit-learn should be update actually
+# 3. The scikit-learn should be update actually
 pip uninstall scikit-learn -y
 pip install scikit-learn==0.24.2
 
-# 5. Go back. Optional: Remove the SimCSE folder
+# 4. Go back. Install the other required packages. Optional: Remove the SimCSE folder
 cd ..
+pip install -r requirements.txt
 # rm -rf SimCSE
 
-# 6. Run the API
+# 5. Run the API
 python simcse_api.py
 
-# 7. Test the API
+# 6. Test the API
 python test_api.py
