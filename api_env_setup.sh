@@ -1,27 +1,27 @@
 #!/bin/bash
 
-# Announcement:
-# python3.9; SimCSE; flask; ...
-
-# Create a virtual environment
+# 1. Create a virtual environment
 python3.9 -m venv venv
 source venv/bin/activate
+
+# 2. Install the required packages - simcse
 git clone https://github.com/princeton-nlp/SimCSE.git
 cd SimCSE
 pip install .
 
-# Go back
-cd ..
-
-# Optional: Remove the SimCSE folder
-rm -rf SimCSE
-
-# Install other dependencies
+# 3. Install the other required packages 
 pip install -r requirements.txt
 
-# Choose the model you want to use. Currently 1 model - simcse_api
-# Run the API
+# 4. The scikit-learn should be update actually
+pip uninstall scikit-learn -y
+pip install scikit-learn==0.24.2
+
+# 5. Go back. Optional: Remove the SimCSE folder
+cd ..
+# rm -rf SimCSE
+
+# 6. Run the API
 python simcse_api.py
 
-# Default port is 5000
-echo "Simcse API is running on port 5000"
+# 7. Test the API
+python test_api.py
